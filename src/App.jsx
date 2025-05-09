@@ -4,6 +4,14 @@ import ThemeBtn from "./Components/ThemeBtn";
 import Card from "./Components/Card";
 
 function App() {
+  const [themeMode, setThemeMode] = useState("light");
+
+  const lightTheme = () => {
+    setThemeMode("light");
+  };
+  const darkTheme = () => {
+    setThemeMode("dark");
+  };
     <ThemeProvider value={{ darkTheme, lightTheme, themeMode }}>
       <div className="flex flex-wrap min-h-screen items-center">
         <div className="w-full">
